@@ -70,3 +70,18 @@ def encode_enc(newimg, data):
       y += 1
     else:
       x += 1
+
+# encode data in the image
+def encode ():
+  img = input("Enter image name(with extension): ")
+  image = Image.open(img, 'r')
+
+  data = input("Enter data to be encoded: ")
+  if (len(data) == 0):
+    raise ValueError('Data is empty')
+  
+  newimage = image.copy()
+  encode_enc(newimage, data)
+
+  newimagename = input("Enter the name of new image(with extension): ")
+  newimage.save(newimagename, str(newimagename.split(".")[1].upper()))
