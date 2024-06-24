@@ -84,6 +84,7 @@ def encode ():
   encode_enc(newimage, data)
 
   newimagename = input("Enter the name of new image(with extension): ")
+  print(str(newimagename.split(".")[1].lower()))
   newimage.save(newimagename, str(newimagename.split(".")[1].upper()))
 
 # Decode the data in the image
